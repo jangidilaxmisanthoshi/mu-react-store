@@ -1,6 +1,7 @@
 import React, { useState } from "react"; 
 import { Link } from "react-router-dom";
-
+import { useState , createContext} from "react";
+import { AppContext } from "./App";
 export default function Register() {
   const [user, setUser] = useState({});
   const [count, setCount] = useState(0);

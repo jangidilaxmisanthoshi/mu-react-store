@@ -1,6 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 export default function Login() {
+  const handlesubmit = () => {
+    console.log(user)
+  }
   return (
     <div>
       <h2>Login Form</h2>
