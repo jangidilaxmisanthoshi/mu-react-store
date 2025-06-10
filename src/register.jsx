@@ -17,6 +17,17 @@ export default function Register() {
     setCount(count - 1);
   };
 
+  const handleSubmit = () => {
+    // Example: Just showing user data in console or alert
+    if (!user.name || !user.email || !user.pass) {
+      alert("Please fill in all fields");
+    } else {
+      console.log("Registered User:", user);
+      alert(`User Registered:\nName: ${user.name}\nEmail: ${user.email}`);
+      // You could send this data to a backend API here
+    }
+  };
+
   return (
     <div>
       <h2>Register</h2>
@@ -42,8 +53,9 @@ export default function Register() {
         />
       </p>
       <p>
-        <button>Submit</button>
+        <button onClick={handleSubmit}>Submit</button>
       </p>
+
       <hr />
       <p>
         <Link to="/login">Already a member? Login Here...</Link>
@@ -52,7 +64,7 @@ export default function Register() {
       <button onClick={handleClick}>Click</button>
       <hr />
 
-      {/* Updated Counter Section */}
+      {/* Counter Section */}
       <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "10px", marginTop: "20px" }}>
         <button onClick={subtractCount} style={{ fontSize: "18px", padding: "5px 10px" }}>−</button>
         <span style={{ fontSize: "20px", minWidth: "30px", textAlign: "center" }}>{count}</span>
